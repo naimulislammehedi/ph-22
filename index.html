@@ -21,8 +21,25 @@
     </main>
 
     <script>
-        console.log("Hello from JavaScript"); 
-        console.log("Hello bole cole gelo"); 
+        // console.log("Hello from JavaScript"); 
+        // console.log("Hello bole cole gelo"); 
+
+        // console.log("Document Object Model")
+
+        const student = {
+            name: "Abul Mia", 
+            id: 121, 
+            study: function (subject) {
+                console.log("Studying subject: ", subject); 
+            }
+        }
+
+        const liCollection = document.getElementsByTagName('li'); 
+        console.log(liCollection); 
+
+        for (const li of liCollection) {
+            console.log(li.innerText)
+        }
     </script>
 </body>
 </html>

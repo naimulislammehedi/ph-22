@@ -1,1 +1,2 @@
 - What is dom, Connect your JS file with HTML file
+- Traversing dom - getElementsByTagName
