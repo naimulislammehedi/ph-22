@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Hello World</h1>
+
+    <p class="message">Message 1</p>
+    <p class="message">Message 2</p>
+    <p class="message">Message 3</p>
+
+    <p class="item">Apple</p>
+    <p class="item">Banana</p>
+    <p class="item">Mango</p>
+
+    <h2 id="heading">Fruits List</h2>
+
+    <script>
+      // getElementById()
+      let heading = document.getElementById("title");
+
+      console.log(heading.textContent);
+
+      // getElementsByClassName()
+      let messages = document.getElementsByClassName("message");
+
+      console.log(messages.length);
+      console.log(messages[0].textContent);
+
+      let newHeading = document.getElementById("heading"); 
+      newHeading.style.color = "blue"; 
+
+      let items = document.getElementsByClassName("item"); 
+
+      for (let i = 0; i < items.length; i++) {
+        items[i].style.color = "green"; 
+      }
+
+    </script>
+  </body>
+</html>

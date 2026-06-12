@@ -7,25 +7,6 @@
 
     <link rel="stylesheet" href="./styles/style.css" />
 
-    <style>
-      h1 {
-        color: gold;
-      }
-
-      #food-title {
-        color: gray;
-      }
-
-      .food .foreign {
-        font-weight: 700;
-      }
-
-      .food .foreign {
-        font-weight: 700;
-      }
-
-      
-    </style>
   </head>
   <body>
     <header>
@@ -36,9 +17,22 @@
         <h1>Welcome to my DOM</h1>
         <ul>
           <li>Shafayet</li>
-          <li>Bonobash</li>
-          <li>Jalali Set</li>
+          <li class="foreign">Bonobash</li>
+          <li id="band">Jalali Set</li>
           <li>Dom de re baba</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1 id="food-title">Foods I Love</h1>
+        <ul>
+          <li>Rice</li>
+          <li>Potato</li>
+          <li>Fish</li>
+          <li>Lentils</li>
+          <li class="foreign">Burger</li>
+          <li class="foreign">Pizza</li>
+          <li>Hundy</li>
         </ul>
       </section>
     </main>
@@ -70,6 +64,23 @@
       const allHeadings = document.getElementsByTagName('h1'); 
       for (const heading of allHeadings) {
         console.log(heading.innerText); 
+      }
+
+      // get by ID 
+      const foodTitleH1 = document.getElementById("food-title"); 
+      console.log(foodTitleH1.textContent); 
+
+      foodTitleH1.innerHTML = "Foods that make me happy"; 
+
+      const bandElement = document.getElementById("band"); 
+      bandElement.innerText = "Jalali Sleeping Band"; 
+
+      // get elements by class name 
+      const foreignElements = document.getElementsByName("foreign"); 
+      console.log(foreignElements); 
+
+      for (const element of foreignElements) {
+        console.log(element.innerText)
       }
       
     </script>
