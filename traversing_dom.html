@@ -1,0 +1,58 @@
+<!-- Traversing DOM - getElementsByTagName() -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <h2>Title 1</h2>
+    <h2>Title 2</h2>
+
+    <div id="container">
+      <p>Paragraph A</p>
+      <p>Paragraph B</p>
+    </div>
+
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Mango</li>
+    </ul>
+
+    <script>
+      // select all <p> elements
+      let paragraphs = document.getElementsByTagName("p");
+
+      console.log(paragraphs.length);
+      console.log(paragraphs[0].textContent);
+
+      //   Change all <h2> elements
+      let headings = document.getElementsByTagName("h2");
+
+      for (let i = 0; i < headings.length; i++) {
+        headings[i].style.color = "blue";
+      }
+
+      let div = document.getElementById("container");
+      let newParagraphs = div.getElementsByTagName("p");
+
+      console.log(paragraphs.length);
+
+      const allUl = document.getElementsByTagName("ul"); 
+
+    //   for (const ul of allUl) {
+    //     console.log(ul.innerText); 
+    //   }
+
+    for (let i = 0; i < allUl.length; i++) {
+        console.log(allUl[i].textContent); 
+    }
+    </script>
+  </body>
+</html>
