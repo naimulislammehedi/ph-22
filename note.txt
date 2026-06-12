@@ -2,8 +2,4 @@
 - Traversing dom - getElementsByTagName
 - Traversing dom - getElementsByClassName VS getElementById
 - Traversing dom - getElementByQuerySelector, querySelectorAll
-- What is dom, Connect your JS file with HTML file
-- Traversing dom - getElementsByTagName
-- Traversing dom - getElementsByClassName VS getElementById
-- Traversing dom - getElementByQuerySelector, querySelectorAll
 

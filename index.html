@@ -32,31 +32,18 @@
       <h1>This is my header no banner</h1>
     </header>
     <main>
-      <section class="songs" id="puran-dhaka">
+      <section class="songs">
         <h1>Welcome to my DOM</h1>
-        <p>Lorem, ipsum dolor sit <span>oli goli</span> amet consectetur adipisicing elit. Exercitationem, earum.</p>
-        <h1>Lorem, ipsum dolor. <span>Some text</span></h1>
         <ul>
           <li>Shafayet</li>
           <li>Bonobash</li>
-          <li id="band-name">Jalali Set</li>
-          <li id="international">Dubai</li>
+          <li>Jalali Set</li>
+          <li>Dom de re baba</li>
         </ul>
       </section>
     </main>
 
-    <section class="food">
-      <h1 id="food-title">Foods I Love</h1>
-      <ul>
-        <li>Rice</li>
-        <li>Potato</li>
-        <li>Lentils</li>
-        <li class="foreign">Burger</li>
-        <li class="foreign">Pizza</li>
-        <li class="foreign">Pasta</li>
-        <li>Mezban</li>
-      </ul>
-    </section>
+    
 
     <script>
       // console.log("Hello from JavaScript");
@@ -65,42 +52,26 @@
       // console.log("Document Object Model")
 
       const student = {
-        name: "Abul Mia",
-        id: 121,
+        name: 'Abul mia', 
+        id: 121, 
         study: function (subject) {
-          console.log("Studying subject: ", subject);
-        },
-      };
+          console.log('studying subject: ', subject)
+        }
+      }
 
-      const liCollection = document.getElementsByTagName("li");
-      console.log(liCollection);
+      const liCollection = document.getElementsByTagName('li'); 
+      console.log(liCollection); 
 
       for (const li of liCollection) {
-        console.log(li.innerText);
+        console.log(li)
       }
 
-      // get by id
-      const foodTitleH1 = document.getElementById("food-title");
-      console.log(foodTitleH1.innerText);
-
-      const bandName = document.getElementById("band-name");
-      console.log(bandName.innerText);
-
-      bandName.innerText = "Jalali Sleeping Band";
-
-      // get elements by class name
-      const foreignElements = document.getElementsByClassName("foreign");
-      console.log(foreignElements);
-
-      for (const element of foreignElements) {
-        console.log(element.innerText);
+      // all h1 tags 
+      const allHeadings = document.getElementsByTagName('h1'); 
+      for (const heading of allHeadings) {
+        console.log(heading.innerText); 
       }
-
-      // querySelectorAll 
-      const spanElements = document.querySelectorAll("#puran-dhaka p span"); 
-      for (const span of spanElements) {
-        console.log(span.innerText); 
-      }
+      
     </script>
   </body>
 </html>
