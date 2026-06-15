@@ -13,8 +13,10 @@
       <h1>This is my header no banner</h1>
     </header>
     <main>
-      <section class="songs">
+      <section class="songs" id="old-dhaka">
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit, <span>Lorem, ipsum dolor.</span> amet consectetur adipisicing elit. Provident <span>vel minus corporis,</span> nihil necessitatibus, dolorum porro dolore eius corrupti iure pariatur ipsa, quam ipsum? Iste dolor accusantium quibusdam tempora autem!</p>
+        <h1>Lorem, ipsum. <span>Lorem, ipsum.</span></h1>
         <ul>
           <li>Shafayet</li>
           <li class="foreign">Bonobash</li>
@@ -23,7 +25,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="food">
         <h1 id="food-title">Foods I Love</h1>
         <ul>
           <li>Rice</li>
@@ -83,6 +85,11 @@
         console.log(element.innerText)
       }
       
+      // query selector all 
+      const spanElements = document.querySelectorAll("#old-dhaka p span"); 
+      for (const span of spanElements) {
+        console.log(span.innerText)
+      }
     </script>
   </body>
 </html>
