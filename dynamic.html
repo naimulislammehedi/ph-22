@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Dynamic Style -->
+    <p id="title">Hello World</p>
+    <button onclick="changeStyle()">Click Me</button>
+
+    <!-- getArrtibute() -->
+    <a id="myLink" href="https://google.com" target="_blank"> Google </a>
+
+    <!-- setAttribute() -->
+    <img src="cat.jpg" alt="" id="photo">
+
+    <script>
+      function changeStyle() {
+        const title = document.getElementById("title");
+
+        title.style.color = "red";
+        title.style.fontSize = "30px";
+        title.style.backgroundColor = "yellow";
+      }
+
+      const link = document.getElementById("myLink");
+
+      console.log(link.getAttribute("href"));
+
+      const photo = document.getElementById("photo"); 
+
+      photo.setAttribute(
+        "src", 
+        "dog.jpg"
+      ); 
+    </script>
+  </body>
+</html>
