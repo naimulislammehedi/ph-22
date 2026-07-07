@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlight {
+            color: white;
+            background: blue;
+            font-size: 30px;
+        }
+
+        .dark {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Styling DOM Properties & Add/ Remove CSS Classes -->
+    <p id="text">Hello World</p>
+
+    <button id="button">Click</button>
+    <button id="themeBtn">Dark Mode</button>
+
+    <script>
+        const text = document.getElementById("text");
+
+        // text.style.color = "red"; 
+        // text.style.fontSize = "30px"; 
+        // text.style.backgroundColor = "yellow"; 
+
+        // Add or Remove CSS Classes
+        text.classList.add("highlight");
+
+        // Remove a Class 
+        text.classList.remove("highlight");
+
+        // Toggle a class 
+        // if the class exist -> remove it 
+        //  if it doesn't exit -> add it 
+        text.classList.toggle("highlight");
+
+        // very useful for: 
+        // dark ode
+        // mobile menu
+        // show/hide content
+        // active buttons 
+
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", () => {
+            text.classList.toggle("highlight");
+        })
+
+        const btn = document.getElementById("themeBtn"); 
+
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("dark"); 
+        })
+
+
+        // Check if a class exists 
+        console.log(text.classList.contains("highlight")); 
+
+        // Replace a class 
+        text.classList.replace("dark", "newDark"); 
+
+        // get all classes 
+        console.log(text.classList)
+    </script>
+</body>
+
+</html>

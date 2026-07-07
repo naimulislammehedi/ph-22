@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .highlight {
+            color: gold;
+            background: blue;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
     <h1 id="text">Hello, World!</h1>
@@ -14,11 +22,11 @@
 
     <script>
     // Dynamic Style: JavaScript can change CSS without editing the CSS file 
-    const text = document.getElementById("text"); 
+    // const text = document.getElementById("text"); 
 
-    text.style.color = "red"; 
-    text.style.fontSize = "30px"; 
-    text.style.backgroundColor = "yellow"; 
+    // text.style.color = "red"; 
+    // text.style.fontSize = "30px"; 
+    // text.style.backgroundColor = "yellow"; 
 
     // getAttribute() 
     const link = document.getElementById("link"); 
@@ -35,6 +43,16 @@
     // innerHTML - Gets or changes the HTML inside an element 
     const box = document.getElementById("box"); 
     box.innerHTML = "<h2>Hello</h2> <p>Welcome!</p>"; 
+
+    // change style directly 
+    const text = document.getElementById("text"); 
+    
+    text.style.color = "red"; 
+    text.style.fontSize = "30px"; 
+    text.style.backgroundColor = "yellow"; 
+
+    // Add or Remove CSS Classes 
+    // text.classList.add("highlight"); 
     </script>
 </body>
 </html>
