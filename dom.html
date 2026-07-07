@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">Hello, World!</h1>
+
+    <a href="https://google.com" id="link">Google</a>
+
+    <div id="box"></div>
+
+    <script>
+    // Dynamic Style: JavaScript can change CSS without editing the CSS file 
+    const text = document.getElementById("text"); 
+
+    text.style.color = "red"; 
+    text.style.fontSize = "30px"; 
+    text.style.backgroundColor = "yellow"; 
+
+    // getAttribute() 
+    const link = document.getElementById("link"); 
+    console.log(link.getAttribute("href")); 
+
+    // setAttribute() 
+    link.setAttribute("href", "https://youtube.com"); 
+    link.setAttribute("target", "_blank"); 
+
+    // innerText 
+    const title = document.getElementById("text"); 
+    console.log(title.innerText); 
+
+    // innerHTML - Gets or changes the HTML inside an element 
+    const box = document.getElementById("box"); 
+    box.innerHTML = "<h2>Hello</h2> <p>Welcome!</p>"; 
+    </script>
+</body>
+</html>
