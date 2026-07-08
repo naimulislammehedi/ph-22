@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="item">Apple</p>
+    <p class="item">Banana</p>
+    <p class="item">Orange</p>
+
+    <div id="container">
+        <p id="text">Hello</p>
+    </div>
+
+    <div id="box">
+        <h1>Hello</h1>
+        <h2>World</h2>
+    </div>
+
+    <!-- creates a new HTML element using js -->
+    <div id="container"></div>
+
+    <li id="list">Study JavaScript</li>
+
+    <script>
+        // nodelist 
+        const items = document.querySelectorAll(".item");
+        console.log(items)
+
+        // Acess an item 
+        console.log(items[0].innerText); 
+
+        // Loop through all items 
+        items.forEach(item => {
+            console.log(item.innerText); 
+        }); 
+
+        // html collection 
+        const itmes = document.getElementsByClassName("item"); 
+        console.log(items); 
+
+        // Access an item 
+        console.log(items[1].innerText); 
+
+        // Loop through it 
+        for (let item of items) {
+            console.log(item.innerText); 
+        }
+
+        // parentNode 
+        const text = document.getElementById("text"); 
+        console.log(text.parentNode)
+
+        // chidlNodes 
+        const box = document.getElementById("box"); 
+        console.log(box.childNodes); 
+
+        // createElement() 
+        const heading = document.createElement("h1"); 
+        heading.innerText = "Welcome"; 
+        document.getElementById("container").appendChild(heading); 
+
+        const li = document.createElement("li"); 
+        li.innerText = "Study JavaScript"; 
+        document.getElementById("list").appendChild(li); 
+    </script>
+</body>
+
+</html>
